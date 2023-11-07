@@ -1,14 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import { Picture } from "astro:assets";
-import logo from "../img/logo.svg";
+import logo from "../../public/logo.svg";
 const pathname = Astro.url.pathname;
+import Logo from "../components/Logo.astro";
 ---
 
 <header class="header">
   <div class="contenedor barra">
     <a href="/">
-      <Image src={logo} alt="Logo GuitarLA" />
+      <Logo />
     </a>
     <nav class="navegacion">
       <a href="/" class={pathname === "/" ? "active" : ""}>Inicio</a>

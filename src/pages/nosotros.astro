@@ -1,10 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import nosotros from "../../public/nosotros.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Nosotros" description="Tienda de guitarras">
   <main class="contenedor">
     <h1 class="heading text-gradient">Nosotros</h1>
+    <div class="contenido">
+      <img src="nosotros.jpg" alt="Nosotros" class="imagen" />
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae enim
+        nec odio feugiat dictum quis sit amet dolor. Duis euismod non libero
+        eget interdum. Suspendisse interdum enim turpis, sed ullamcorper ante
+        mollis eget. Orci varius natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Aenean fringilla diam a lobortis porta.
+        Nam enim odio, facilisis eget sem ac, dictum dapibus dui. Morbi at
+        egestas mauris. faucibus. Curabitur a luctus dolor, ultricies aliquet
+        libero. Nunc eu sapien eu mauris porta posuere suscipit a ipsum. Nam
+        venenatis sagittis suscipit.
+      </p>
+    </div>
 
     <path
       fill-rule="evenodd"
@@ -26,3 +44,15 @@ import Layout from "../layouts/Layout.astro";
     </defs>
   </main>
 </Layout>
+<style>
+  .contenido {
+    display: grid;
+    gap: 4rem;
+  }
+  @media (min-width: 768px) {
+    .contenido {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+</style>
